@@ -11,7 +11,7 @@ export function DatenschutzContent() { return (<div className="legal-container w
       <a href="#section-1">Verantwortlicher</a>
       <a href="#section-1-1">SSL / TLS</a>
       <a href="#section-2-4">Kontaktformular</a>
-      <a href="#section-2-5-2">Google Analytics</a>
+      <a href="#section-2-6-2">Google Analytics</a>
       <a href="#section-6">Ihre Rechte</a>
       <a href="#section-6-2">Widerspruchsrecht</a>
     </nav>
@@ -71,12 +71,18 @@ export function DatenschutzContent() { return (<div className="legal-container w
         <p>Für die technische Übermittlung des Formulars verwende ich den Dienst FormSubmit. Anbieter ist FormSubmit, weitere Informationen finden Sie unter:</p>
         <p><a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">https://formsubmit.co/privacy.pdf</a></p>
         <p>Die Verarbeitung erfolgt je nach Anlass auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, soweit es um vorvertragliche Maßnahmen oder konkrete Leistungsanfragen geht, oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aufgrund meines berechtigten Interesses an einer effizienten Bearbeitung von Anfragen.</p>
-        <h3 id="section-2-5">2.5. Cookies und Webanalyse</h3>
+        <h3 id="section-2-5">2.5. Online-Terminbuchung (Calendly)</h3>
+        <p>Zur Vereinbarung von Terminen biete ich die Nutzung des Tools „Calendly“ an. Anbieter ist die Calendly LLC, 271 17th St NW, 10th Floor, Atlanta, Georgia 30363, USA.</p>
+        <p>Wenn Sie einen Termin über meine Website buchen, werden die von Ihnen eingegebenen Daten (wie z. B. Name, E-Mail-Adresse, Terminzeitpunkt sowie optionale Angaben zu Ihrem Anliegen) auf den Servern von Calendly gespeichert. Dies dient der Organisation und Verwaltung der Anfragen.</p>
+        <p>Die Nutzung von Calendly erfolgt auf Grundlage meines berechtigten Interesses an einer nutzerfreundlichen und effizienten Terminverwaltung (Art. 6 Abs. 1 lit. f DSGVO). Dient die Terminbuchung der Vorbereitung oder Durchführung eines Vertrages, ist die Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.</p>
+        <p>Da personenbezogene Daten in die USA übertragen werden, weise ich darauf hin, dass die Datenübertragung auf Grundlage des EU-U.S. Data Privacy Frameworks sowie der Standardvertragsklauseln der EU-Kommission erfolgt, um ein angemessenes Datenschutzniveau zu gewährleisten.</p>
+        <p>Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Calendly: <a href="https://calendly.com/de/privacy" target="_blank" rel="noopener noreferrer">https://calendly.com/de/privacy</a>.</p>
+        <h3 id="section-2-6">2.6. Cookies und Webanalyse</h3>
         <p>Auf meiner Website setze ich Cookies und ähnliche Technologien ein. Dabei unterscheide ich zwischen technisch notwendigen Cookies und solchen, die Analysezwecken dienen.</p>
-        <h4 id="section-2-5-1">2.5.1. Technisch notwendige (essenzielle) Cookies</h4>
+        <h4 id="section-2-6-1">2.6.1. Technisch notwendige (essenzielle) Cookies</h4>
         <p>Für den sicheren und fehlerfreien Betrieb meiner Website sind bestimmte Cookies zwingend erforderlich. Die Speicherung dieser Cookies auf Ihrem Endgerät und der Zugriff darauf erfolgen auf Grundlage von § 25 Abs. 2 TDDDG. Die anschließende Verarbeitung personenbezogener Daten erfolgt auf Grundlage meines berechtigten Interesses an der fehlerfreien, sicheren und nutzerfreundlichen Bereitstellung meiner Website gemäß Art. 6 Abs. 1 lit. f DSGVO.</p>
         <p>Hierzu zählen insbesondere Cookies, mit denen ich Ihre Cookie-Auswahl auf der Website speichern kann.</p>
-        <h4 id="section-2-5-2">2.5.2. Analyse-Cookies (Google Analytics 4)</h4>
+        <h4 id="section-2-6-2">2.6.2. Analyse-Cookies (Google Analytics 4)</h4>
         <p>Zusätzlich verwende ich Google Analytics 4, um die Performance meiner Website zu messen und das Nutzerverhalten zu analysieren, etwa Seitenaufrufe, Verweildauer und Klickwege. Als alleiniger Entwickler möchte ich verstehen, wie Besucher auf meine Website gelangen und welche Inhalte besonders relevant sind. Nur auf dieser Grundlage kann ich die Benutzerfreundlichkeit meiner Website verbessern und meine App gezielt weiterentwickeln und vermarkten.</p>
         <p>Neben allgemeinen Seitenaufrufen habe ich in Google Analytics die sogenannten „Optimierten Analysen“ aktiviert. Dadurch werden zusätzlich folgende spezifische Nutzerinteraktionen erfasst: Scrollvorgänge, Klicks auf Links, die von meiner Website wegführen (externe Links), Suchanfragen innerhalb der Website, Interaktionen mit eingebetteten Videos, Dateidownloads sowie Interaktionen mit Formularen (z. B. der Start des Ausfüllens). Es werden hierbei keine in Formulare eingegebenen persönlichen Texte an Google gesendet.</p>
         <p>Google Analytics 4 nutzt standardmäßig eine automatische IP-Anonymisierung. Das bedeutet, dass Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum vor der Speicherung gekürzt wird.</p>
