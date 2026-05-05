@@ -537,8 +537,11 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 bg-[#0B1221] border-t border-white/5 text-center">
+      <footer className="py-8 bg-[#0B1221] border-t border-white/5 text-center flex flex-col items-center gap-4">
         <p className="text-white/40 text-[15px] uppercase tracking-[1px]">© {new Date().getFullYear()} Schob Digital. Alle Rechte vorbehalten.</p>
+        <button data-open-cookie-settings className="text-white/40 hover:text-white transition-colors text-[13px] underline">
+          Cookie-Einstellungen
+        </button>
       </footer>
         </div>
       </div>
