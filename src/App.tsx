@@ -5,6 +5,7 @@ import './index.css';
 import { ImpressumContent } from './ImpressumJSX';
 import { DatenschutzContent } from './DatenschutzJSX';
 import meetliImage from './assets/image_for_meetli.png';
+import djImage from './assets/dj_feuerwerk.PNG';
 
 function DifferenceSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -559,7 +560,7 @@ const portfolioItems = [
   {
     title: "DJ Vasily",
     desc: "Professioneller Auftritt für DJ & Event-Equipment.",
-    image: "https://images.unsplash.com/photo-1516873240891-4bf014598ab4?auto=format&fit=crop&q=80&w=1920",
+    image: djImage,
     link: "https://vasilygenai.github.io/DJ_Vasily/"
   },
   {
