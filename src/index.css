@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Georgia:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", ui-serif, serif;
+}
+
+@layer components {
+  .legal-container {
+    @apply max-w-4xl mx-auto py-24 px-6 md:px-10 text-white font-sans;
+  }
+
+  .legal-hero {
+    @apply mb-16;
+  }
+
+  .eyebrow {
+    @apply uppercase tracking-[2px] text-xs font-bold text-[#DCC99E] mb-6 block;
+  }
+
+  .legal-hero h1 {
+    @apply font-serif text-[42px] md:text-[64px] font-bold mb-6 leading-tight;
+  }
+
+  .legal-hero p {
+    @apply text-[18px] md:text-[22px] text-white/80 max-w-2xl leading-relaxed;
+  }
+
+  .legal-jump-nav {
+    @apply flex flex-wrap gap-4 mb-16 p-6 rounded-2xl bg-white/5 border border-white/10;
+  }
+
+  .legal-jump-nav a {
+    @apply text-sm text-white/70 hover:text-white transition-colors bg-white/10 px-4 py-2 rounded-full;
+  }
+
+  .legal-content h2 {
+    @apply font-serif text-[28px] md:text-[36px] font-bold mt-20 mb-8 text-white border-b border-white/10 pb-4;
+  }
+
+  .legal-content h3 {
+    @apply text-[20px] md:text-[24px] font-bold mt-12 mb-6 text-white/95;
+  }
+  
+  .legal-content h4 {
+    @apply text-[14px] font-bold mt-10 mb-4 text-white/60 tracking-wider uppercase;
+  }
+
+  .legal-content p {
+    @apply text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/80;
+  }
+
+  .legal-meta {
+    @apply text-[16px] md:text-[18px] mb-2 text-white/80;
+  }
+
+  .legal-content a {
+    @apply text-[#DCC99E] hover:text-white transition-colors underline underline-offset-4 decoration-white/20 hover:decoration-white/100 break-all;
+  }
+
+  .legal-content ul, .legal-content ol {
+    @apply mb-8 pl-6 text-[16px] md:text-[18px] text-white/80 leading-[1.8] list-disc marker:text-[#DCC99E];
+  }
+
+  .legal-content li {
+    @apply mb-3 pl-2;
+  }
+
+  .card-glass {
+    @apply bg-[#151D2C] rounded-3xl p-8 md:p-14 mb-8 border border-white/5 shadow-xl;
+  }
+}
