@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2, Menu, X } from 'lucide-react';
 import './index.css';
 import { ImpressumContent } from './ImpressumJSX';
 import { DatenschutzContent } from './DatenschutzJSX';
+import meetliImage from './assets/image_for_meetli.png';
 
 function DifferenceSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -573,7 +574,7 @@ const portfolioItems = [
   {
     title: "Meetli",
     desc: "Universitäts-Projekt mit Fokus auf saubere Nutzerführung.",
-    image: "https://image.thum.io/get/width/1200/https://www.meetli.ch/",
+    image: meetliImage,
     link: "https://www.meetli.ch/"
   }
 ];
