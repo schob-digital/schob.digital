@@ -1,4 +1,4 @@
-export function ImpressumContent() { return (<div className="legal-container w-full max-w-4xl py-24 px-6 md:px-14 text-white">
+export function ImpressumDE() { return (<div className="legal-container w-full max-w-4xl py-24 px-6 md:px-14 text-white">
     <section className="legal-hero card-glass">
       <p className="eyebrow eyebrow--dark">Rechtliches</p>
       <h1>Impressum</h1>

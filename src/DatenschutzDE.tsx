@@ -1,4 +1,4 @@
-export function DatenschutzContent() { return (<div className="legal-container w-full max-w-4xl py-24 px-6 md:px-14 text-white">
+export function DatenschutzDE() { return (<div className="legal-container w-full max-w-4xl py-24 px-6 md:px-14 text-white">
     <section className="legal-hero card-glass">
       <p className="eyebrow eyebrow--dark">Rechtliches</p>
       <h1>Datenschutz</h1>
@@ -72,11 +72,11 @@ export function DatenschutzContent() { return (<div className="legal-container w
         <p><a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">https://formsubmit.co/privacy.pdf</a></p>
         <p>Die Verarbeitung erfolgt je nach Anlass auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, soweit es um vorvertragliche Maßnahmen oder konkrete Leistungsanfragen geht, oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aufgrund meines berechtigten Interesses an einer effizienten Bearbeitung von Anfragen.</p>
         <h3 id="section-2-5">2.5. Online-Terminbuchung (Calendly)</h3>
-        <p>Zur Vereinbarung von Terminen biete ich die Nutzung des Tools „Calendly“ an. Anbieter ist die Calendly LLC, 271 17th St NW, 10th Floor, Atlanta, Georgia 30363, USA.</p>
+        <p>Zur Vereinbarung von Terminen biete ich die Nutzung des Tools „Calendly“ an. Anbieter ist Calendly, LLC, 115 E Main St, Ste A1B, Buford, GA 30518, USA.</p>
         <p>Wenn Sie einen Termin über meine Website buchen, werden die von Ihnen eingegebenen Daten (wie z. B. Name, E-Mail-Adresse, Terminzeitpunkt sowie optionale Angaben zu Ihrem Anliegen) auf den Servern von Calendly gespeichert. Dies dient der Organisation und Verwaltung der Anfragen.</p>
         <p>Die Nutzung von Calendly erfolgt auf Grundlage meines berechtigten Interesses an einer nutzerfreundlichen und effizienten Terminverwaltung (Art. 6 Abs. 1 lit. f DSGVO). Dient die Terminbuchung der Vorbereitung oder Durchführung eines Vertrages, ist die Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO.</p>
         <p>Da personenbezogene Daten in die USA übertragen werden, weise ich darauf hin, dass die Datenübertragung auf Grundlage des EU-U.S. Data Privacy Frameworks sowie der Standardvertragsklauseln der EU-Kommission erfolgt, um ein angemessenes Datenschutzniveau zu gewährleisten.</p>
-        <p>Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Calendly: <a href="https://calendly.com/de/privacy" target="_blank" rel="noopener noreferrer">https://calendly.com/de/privacy</a>.</p>
+        <p>Weitere Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Calendly: <a href="https://calendly.com/legal/privacy-notice" target="_blank" rel="noopener noreferrer">https://calendly.com/legal/privacy-notice</a>.</p>
         <h3 id="section-2-6">2.6. Cookies und Webanalyse</h3>
         <p>Auf meiner Website setze ich Cookies und ähnliche Technologien ein. Dabei unterscheide ich zwischen technisch notwendigen Cookies und solchen, die Analysezwecken dienen.</p>
         <h4 id="section-2-6-1">2.6.1. Technisch notwendige (essenzielle) Cookies</h4>

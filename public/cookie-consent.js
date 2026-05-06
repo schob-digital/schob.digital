@@ -1,6 +1,7 @@
 (function() {
   const COOKIE_NAME = 'schob_cookie_consent';
   const COOKIE_DAYS = 180;
+  const LANGUAGE_STORAGE_KEY = 'schob_language';
 
   const COOKIE_TEXT = {
     de: {
@@ -16,12 +17,63 @@
       catAnalytics: 'Google Analytics',
       catAnalyticsDesc: 'Diese Cookies helfen uns, das Nutzungsverhalten zu analysieren und unsere Website zu verbessern.',
       detailsText: 'Details anzeigen',
-      btnSave: 'Auswahl speichern'
+      btnSave: 'Auswahl speichern',
+      necessaryDetail: 'Speichert die Cookie-Einwilligung (180 Tage)',
+      gaDetail: 'Registriert eine eindeutige ID (2 Jahre)',
+      gaSessionDetail: 'Behält den Sitzungsstatus bei (2 Jahre)'
+    },
+    en: {
+      bannerTitle: 'We use cookies',
+      bannerText: 'We use cookies to improve the usability of this website. Some are essential, while others help us improve the website and your experience.',
+      btnNecessary: 'Necessary only',
+      btnSettings: 'Settings',
+      btnAcceptAll: 'Accept all',
+      modalTitle: 'Cookie settings',
+      modalText: 'Here you can choose which cookies you want to allow. You can change your settings at any time.',
+      catNecessary: 'Necessary cookies',
+      catNecessaryDesc: 'These cookies are required for the basic functions of the website and cannot be disabled.',
+      catAnalytics: 'Google Analytics',
+      catAnalyticsDesc: 'These cookies help us analyze usage behavior and improve the website.',
+      detailsText: 'Show details',
+      btnSave: 'Save selection',
+      necessaryDetail: 'Stores cookie consent (180 days)',
+      gaDetail: 'Registers a unique ID (2 years)',
+      gaSessionDetail: 'Keeps the session status (2 years)'
+    },
+    uk: {
+      bannerTitle: 'Ми використовуємо cookies',
+      bannerText: 'Ми використовуємо cookies, щоб покращити зручність цього вебсайту. Деякі з них необхідні, інші допомагають нам покращувати сайт і ваш досвід.',
+      btnNecessary: 'Лише необхідні',
+      btnSettings: 'Налаштування',
+      btnAcceptAll: 'Прийняти всі',
+      modalTitle: 'Налаштування cookie',
+      modalText: 'Тут ви можете обрати, які cookies дозволити. Ви можете змінити налаштування в будь-який момент.',
+      catNecessary: 'Необхідні cookies',
+      catNecessaryDesc: 'Ці cookies потрібні для базових функцій вебсайту і не можуть бути вимкнені.',
+      catAnalytics: 'Google Analytics',
+      catAnalyticsDesc: 'Ці cookies допомагають аналізувати використання сайту та покращувати його.',
+      detailsText: 'Показати деталі',
+      btnSave: 'Зберегти вибір',
+      necessaryDetail: 'Зберігає згоду на cookies (180 днів)',
+      gaDetail: 'Реєструє унікальний ID (2 роки)',
+      gaSessionDetail: 'Зберігає статус сесії (2 роки)'
     }
   };
 
+  let eventsBound = false;
+
+  function getSavedLanguage() {
+    try {
+      return window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    } catch (e) {
+      return null;
+    }
+  }
+
   function getLang() {
-    const lang = document.documentElement.lang || 'de';
+    const savedLanguage = getSavedLanguage();
+    const htmlLanguage = document.documentElement.lang || 'de';
+    const lang = savedLanguage || htmlLanguage;
     return COOKIE_TEXT[lang] ? lang : 'de';
   }
 
@@ -45,7 +97,7 @@
     };
     const expires = new Date(Date.now() + COOKIE_DAYS * 24 * 60 * 60 * 1000).toUTCString();
     document.cookie = `${COOKIE_NAME}=${encodeURIComponent(JSON.stringify(consent))}; expires=${expires}; path=/; SameSite=Lax`;
-    
+
     applyConsent(consent);
   }
 
@@ -100,11 +152,62 @@
     });
   }
 
+  function removeCookieUi() {
+    const banner = document.getElementById('cookie-banner');
+    const modal = document.getElementById('cookie-modal');
+    if (banner) banner.remove();
+    if (modal) modal.remove();
+  }
+
+  function bindEventsOnce() {
+    if (eventsBound) return;
+    eventsBound = true;
+
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (!target || typeof target.closest !== 'function') return;
+
+      const btn = target.closest('[data-cookie-action]');
+      if (btn) {
+        const action = btn.getAttribute('data-cookie-action');
+        if (action === 'necessary') {
+          setConsent(false);
+          closeAllUi();
+        } else if (action === 'all') {
+          setConsent(true);
+          closeAllUi();
+        } else if (action === 'settings') {
+          openModal();
+        } else if (action === 'close-modal') {
+          closeModal();
+        } else if (action === 'save') {
+          const analyticsToggle = document.getElementById('cookie-analytics-toggle');
+          setConsent(Boolean(analyticsToggle && analyticsToggle.checked));
+          closeAllUi();
+        }
+      }
+
+      const openBtn = target.closest('[data-open-cookie-settings]');
+      if (openBtn) {
+        e.preventDefault();
+        openModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('cookie-modal');
+      if (e.key === 'Escape' && modal && !modal.hidden) {
+        closeModal();
+      }
+    });
+  }
+
   function createCookieUi() {
     const lang = getLang();
     const t = COOKIE_TEXT[lang];
 
-    // Banner
+    removeCookieUi();
+
     const banner = document.createElement('div');
     banner.id = 'cookie-banner';
     banner.hidden = true;
@@ -118,7 +221,6 @@
       </div>
     `;
 
-    // Modal
     const modal = document.createElement('div');
     modal.id = 'cookie-modal';
     modal.hidden = true;
@@ -130,7 +232,7 @@
         </div>
         <div class="cookie-modal-body">
           <p>${t.modalText}</p>
-          
+
           <div class="cookie-category">
             <div class="cookie-category-header">
               <div class="cookie-category-info">
@@ -145,7 +247,7 @@
             <details class="cookie-details">
               <summary>${t.detailsText}</summary>
               <ul>
-                <li><strong>${COOKIE_NAME}</strong>: Speichert die Cookie-Einwilligung (180 Tage)</li>
+                <li><strong>${COOKIE_NAME}</strong>: ${t.necessaryDetail}</li>
               </ul>
             </details>
           </div>
@@ -164,8 +266,8 @@
             <details class="cookie-details">
               <summary>${t.detailsText}</summary>
               <ul>
-                <li><strong>_ga</strong>: Registriert eine eindeutige ID (2 Jahre)</li>
-                <li><strong>_ga_*</strong>: Behält den Sitzungsstatus bei (2 Jahre)</li>
+                <li><strong>_ga</strong>: ${t.gaDetail}</li>
+                <li><strong>_ga_*</strong>: ${t.gaSessionDetail}</li>
               </ul>
             </details>
           </div>
@@ -179,44 +281,7 @@
 
     document.body.appendChild(banner);
     document.body.appendChild(modal);
-
-    // Event Delegation
-    document.addEventListener('click', (e) => {
-      // Buttons that trigger actions
-      const btn = e.target.closest('[data-cookie-action]');
-      if (btn) {
-        const action = btn.getAttribute('data-cookie-action');
-        if (action === 'necessary') {
-          setConsent(false);
-          closeAllUi();
-        } else if (action === 'all') {
-          setConsent(true);
-          closeAllUi();
-        } else if (action === 'settings') {
-          openModal();
-        } else if (action === 'close-modal') {
-          closeModal();
-        } else if (action === 'save') {
-          const analyticsToggle = document.getElementById('cookie-analytics-toggle');
-          setConsent(analyticsToggle.checked);
-          closeAllUi();
-        }
-      }
-
-      // Buttons that open settings
-      const openBtn = e.target.closest('[data-open-cookie-settings]');
-      if (openBtn) {
-        e.preventDefault();
-        openModal();
-      }
-    });
-
-    // Close on escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal.hidden) {
-        closeModal();
-      }
-    });
+    bindEventsOnce();
   }
 
   function openModal() {
@@ -226,8 +291,7 @@
     if (modal) {
       modal.hidden = false;
       document.body.classList.add('cookie-modal-open');
-      
-      // Update toggle to match saved state
+
       const consent = getConsent();
       const analyticsToggle = document.getElementById('cookie-analytics-toggle');
       if (analyticsToggle) {
@@ -241,7 +305,7 @@
     if (modal) {
       modal.hidden = true;
       document.body.classList.remove('cookie-modal-open');
-      
+
       const consent = getConsent();
       if (!consent) {
         const banner = document.getElementById('cookie-banner');
@@ -258,29 +322,44 @@
     document.body.classList.remove('cookie-modal-open');
   }
 
-  function init() {
-    const consent = getConsent();
-    if (!consent) {
-      // Show banner if no consent
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => {
-          createCookieUi();
-          document.getElementById('cookie-banner').hidden = false;
-        });
-      } else {
-        createCookieUi();
-        document.getElementById('cookie-banner').hidden = false;
-      }
-    } else {
-      // Apply consent immediately, inject UI later
-      applyConsent(consent);
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', createCookieUi);
-      } else {
-        createCookieUi();
-      }
+  function refreshLanguage() {
+    const currentBanner = document.getElementById('cookie-banner');
+    const currentModal = document.getElementById('cookie-modal');
+    const bannerWasVisible = Boolean(currentBanner && !currentBanner.hidden);
+    const modalWasVisible = Boolean(currentModal && !currentModal.hidden);
+    const hasConsent = Boolean(getConsent());
+
+    createCookieUi();
+
+    if (modalWasVisible) {
+      openModal();
+    } else if (bannerWasVisible && !hasConsent) {
+      const nextBanner = document.getElementById('cookie-banner');
+      if (nextBanner) nextBanner.hidden = false;
     }
   }
 
+  function init() {
+    const consent = getConsent();
+    if (consent) {
+      applyConsent(consent);
+    }
+
+    const ready = () => {
+      createCookieUi();
+      if (!consent) {
+        const banner = document.getElementById('cookie-banner');
+        if (banner) banner.hidden = false;
+      }
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', ready);
+    } else {
+      ready();
+    }
+  }
+
+  window.addEventListener('schob-language-change', refreshLanguage);
   init();
 })();
