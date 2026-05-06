@@ -458,22 +458,22 @@ export default function App() {
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="contact-name" className="text-[16px] uppercase tracking-[1px] font-bold text-[#1a1a1a]/60">Name</label>
+                  <label htmlFor="contact-name" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">Name</label>
                   <input id="contact-name" name="name" type="text" required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <label htmlFor="contact-email" className="text-[16px] uppercase tracking-[1px] font-bold text-[#1a1a1a]/60">E-Mail</label>
+                  <label htmlFor="contact-email" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">E-Mail</label>
                   <input id="contact-email" name="email" type="email" required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="contact-company" className="text-[16px] uppercase tracking-[1px] font-bold text-[#1a1a1a]/60">Unternehmen</label>
+                <label htmlFor="contact-company" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">Unternehmen</label>
                 <input id="contact-company" name="company" type="text" className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="contact-service" className="text-[16px] uppercase tracking-[1px] font-bold text-[#1a1a1a]/60">Service-Paket</label>
+                <label htmlFor="contact-service" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">Service-Paket</label>
                 <div className="relative">
                   <select 
                     id="contact-service" 
@@ -496,7 +496,7 @@ export default function App() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="contact-support" className="text-[16px] uppercase tracking-[1px] font-bold text-[#1a1a1a]/60">Optionales Support Add-on</label>
+                <label htmlFor="contact-support" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">Optionales Support Add-on</label>
                 <div className="relative">
                   <select 
                     id="contact-support" 
@@ -516,14 +516,14 @@ export default function App() {
               </div>
 
               <div className="flex flex-col gap-2">
-                <label htmlFor="contact-message" className="text-[16px] uppercase tracking-[1px] font-bold text-[#1a1a1a]/60">Welche Art von Website brauchst du gerade konkret?</label>
+                <label htmlFor="contact-message" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">Welche Art von Website brauchst du gerade konkret?</label>
                 <textarea id="contact-message" name="message" rows={5} required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors resize-none text-[16px]"></textarea>
               </div>
 
               <label className="flex items-start gap-3 mt-4 cursor-pointer group">
                 <input id="contact-consent" name="privacy" type="checkbox" required className="mt-1 w-5 h-5 accent-[#1a1a1a]" />
-                <span className="text-[16px] text-[#666] leading-[1.6]">
-                  Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden. Weitere Informationen stehen in der <a href="#datenschutz" onClick={() => setCurrentPage('datenschutz')} className="underline hover:text-[#1a1a1a] transition-colors">Datenschutzerklärung</a>.
+                <span className="text-[16px] text-white/80 leading-[1.6]">
+                  Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Anfrage verarbeitet werden. Weitere Informationen stehen in der <a href="#datenschutz" onClick={() => setCurrentPage('datenschutz')} className="underline hover:text-white transition-colors">Datenschutzerklärung</a>.
                 </span>
               </label>
 
