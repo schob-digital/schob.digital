@@ -2,13 +2,12 @@ import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ArrowRight, CheckCircle2, Menu, X } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
+import { getPageHref, getSectionHref } from './routing';
 import { type Language, siteContent } from './siteContent';
 
-type Page = 'home' | 'impressum' | 'datenschutz';
 export type HomePageProps = {
   language: Language;
   setLanguage: (language: Language) => void;
-  setCurrentPage: (page: Page) => void;
 };
 
 type SiteCopy = (typeof siteContent)[Language];
@@ -20,31 +19,28 @@ const navLinkClass =
 
 type NavigationProps = HomePageProps;
 
-export function Navigation({ language, setLanguage, setCurrentPage }: NavigationProps) {
+export function Navigation({ language, setLanguage }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const t = siteContent[language];
+  const homeHref = getPageHref('home');
+  const impressumHref = getPageHref('impressum');
+  const datenschutzHref = getPageHref('datenschutz');
 
   const setLanguageAndClose = (nextLanguage: Language) => {
     setLanguage(nextLanguage);
     setIsMobileMenuOpen(false);
   };
 
-  const closeToHome = () => {
-    setCurrentPage('home');
-    setIsMobileMenuOpen(false);
-  };
-
-  const closeToPage = (page: Page) => {
-    setCurrentPage(page);
+  const closeMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
   const sectionLinks = [
-    { href: '#portfolio', label: t.nav.portfolio },
-    { href: '#difference', label: t.nav.difference },
-    { href: '#calendly', label: t.nav.calendly },
-    { href: '#packages', label: t.nav.packages },
-    { href: '#contact', label: t.nav.contact },
+    { href: getSectionHref('portfolio'), label: t.nav.portfolio },
+    { href: getSectionHref('difference'), label: t.nav.difference },
+    { href: getSectionHref('calendly'), label: t.nav.calendly },
+    { href: getSectionHref('packages'), label: t.nav.packages },
+    { href: getSectionHref('contact'), label: t.nav.contact },
   ];
 
   return (
@@ -52,8 +48,8 @@ export function Navigation({ language, setLanguage, setCurrentPage }: Navigation
       <div className="w-full px-6 md:px-10 xl:px-14 flex items-center justify-between gap-4 h-full relative">
         <div className="absolute inset-0 pointer-events-none flex items-center justify-center lg:static lg:flex-shrink-0 lg:justify-start lg:inset-auto lg:h-auto">
           <a
-            href="#home"
-            onClick={closeToHome}
+            href={homeHref}
+            onClick={closeMenu}
             className="pointer-events-auto flex-shrink-0 font-serif text-[18px] md:text-[22px] font-bold tracking-[-0.5px] uppercase group-hover:text-[#1a1a1a] transition-colors whitespace-nowrap relative z-[60] text-[#DCC99E]"
           >
             Schob Digital
@@ -62,7 +58,7 @@ export function Navigation({ language, setLanguage, setCurrentPage }: Navigation
 
         <div className="hidden lg:flex flex-1 justify-center gap-3 xl:gap-7 items-center px-4">
           {sectionLinks.map((link) => (
-            <a key={link.href} href={link.href} onClick={closeToHome} className={navLinkClass}>
+            <a key={link.href} href={link.href} onClick={closeMenu} className={navLinkClass}>
               {link.label}
             </a>
           ))}
@@ -70,10 +66,10 @@ export function Navigation({ language, setLanguage, setCurrentPage }: Navigation
         </div>
 
         <div className="hidden lg:flex flex-shrink-0 gap-3 xl:gap-6 items-center justify-end">
-          <a href="#impressum" onClick={() => closeToPage('impressum')} className={navLinkClass}>
+          <a href={impressumHref} onClick={closeMenu} className={navLinkClass}>
             {t.nav.imprint}
           </a>
-          <a href="#datenschutz" onClick={() => closeToPage('datenschutz')} className={navLinkClass}>
+          <a href={datenschutzHref} onClick={closeMenu} className={navLinkClass}>
             {t.nav.privacy}
           </a>
         </div>
@@ -117,22 +113,22 @@ export function Navigation({ language, setLanguage, setCurrentPage }: Navigation
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={closeToHome}
+                  onClick={closeMenu}
                   className="py-4 text-[14px] uppercase tracking-[2px] font-bold text-white hover:text-[#DCC99E] transition-colors border-b border-white/10"
                 >
                   {link.label}
                 </a>
               ))}
               <a
-                href="#impressum"
-                onClick={() => closeToPage('impressum')}
+                href={impressumHref}
+                onClick={closeMenu}
                 className="py-4 text-[14px] uppercase tracking-[2px] font-bold text-white/70 hover:text-white transition-colors border-b border-white/10"
               >
                 {t.nav.imprint}
               </a>
               <a
-                href="#datenschutz"
-                onClick={() => closeToPage('datenschutz')}
+                href={datenschutzHref}
+                onClick={closeMenu}
                 className="py-4 text-[14px] uppercase tracking-[2px] font-bold text-white/70 hover:text-white transition-colors"
               >
                 {t.nav.privacy}
@@ -203,11 +199,14 @@ function DifferenceSection({ copy }: { copy: SiteCopy['difference'] }) {
   );
 }
 
-export function HomePage({ language, setCurrentPage }: HomePageProps) {
+export function HomePage({ language }: HomePageProps) {
   const t = siteContent[language];
   const [selectedService, setSelectedService] = useState<PackageId | 'custom' | ''>('');
   const [selectedSupport, setSelectedSupport] = useState<SupportId | 'none'>('none');
   const [formStatus, setFormStatus] = useState<'idle' | 'success'>('idle');
+  const calendlyHref = getSectionHref('calendly');
+  const contactHref = getSectionHref('contact');
+  const datenschutzHref = getPageHref('datenschutz');
 
   useEffect(() => {
     const script = document.createElement('script');
@@ -256,8 +255,7 @@ export function HomePage({ language, setCurrentPage }: HomePageProps) {
               <p className="text-[#DCC99E] text-[17px] md:text-[19px] mb-10 md:mb-16 font-light">{t.hero.subline}</p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="#calendly"
-                  onClick={() => setCurrentPage('home')}
+                  href={calendlyHref}
                   className="px-8 py-4 bg-white text-[#111] uppercase text-[15px] font-bold tracking-[1px] rounded-none hover:bg-[#f0f0f0] transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   {t.hero.cta} <ArrowRight className="w-5 h-5" />
@@ -377,7 +375,7 @@ export function HomePage({ language, setCurrentPage }: HomePageProps) {
                   </ul>
                 </div>
                 <a
-                  href="#contact"
+                  href={contactHref}
                   onClick={() => setSelectedService(pkg.id)}
                   className={`w-full py-3 mt-auto text-center font-bold text-[16px] uppercase tracking-[1px] transition-colors border ${
                     pkg.highlight
@@ -411,7 +409,7 @@ export function HomePage({ language, setCurrentPage }: HomePageProps) {
                 <p className="text-[19px] text-[#222] font-semibold mb-4">{option.lead}</p>
                 <p className="text-[18px] text-[#666] leading-[1.6] mb-8">{option.desc}</p>
                 <a
-                  href="#contact"
+                  href={contactHref}
                   onClick={() => setSelectedSupport(option.id)}
                   className="w-full py-3 mt-auto text-center font-bold text-[16px] uppercase tracking-[1px] transition-colors border bg-transparent text-[#1a1a1a] border-[#1a1a1a] hover:bg-[#f0f0f0]"
                 >
@@ -560,7 +558,7 @@ export function HomePage({ language, setCurrentPage }: HomePageProps) {
                     <input id="contact-consent" name="privacy" type="checkbox" required className="mt-1 w-5 h-5 accent-[#1a1a1a]" />
                     <span className="text-[16px] text-white/80 leading-[1.6]">
                       {t.contact.consentStart}{' '}
-                      <a href="#datenschutz" onClick={() => setCurrentPage('datenschutz')} className="underline hover:text-white transition-colors">
+                      <a href={datenschutzHref} className="underline hover:text-white transition-colors">
                         {t.contact.consentLink}
                       </a>
                       {t.contact.consentEnd}

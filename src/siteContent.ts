@@ -1,5 +1,4 @@
-import meetliImage from './assets/image_for_meetli.png';
-import djImage from './assets/dj_feuerwerk.PNG';
+import { getStaticAssetPath } from './routing';
 
 export type Language = 'de' | 'en' | 'uk';
 
@@ -15,7 +14,7 @@ const portfolioLinks = {
     link: 'https://schob-digital.github.io/Hochzeitsservicede/',
   },
   dj: {
-    image: djImage,
+    image: getStaticAssetPath('portfolio-assets/dj_feuerwerk.PNG'),
     link: 'https://vasilygenai.github.io/DJ_Vasily/',
   },
   misjudged: {
@@ -28,7 +27,7 @@ const portfolioLinks = {
     contain: true,
   },
   meetli: {
-    image: meetliImage,
+    image: getStaticAssetPath('portfolio-assets/image_for_meetli.png'),
     link: 'https://www.meetli.ch/',
   },
 };
