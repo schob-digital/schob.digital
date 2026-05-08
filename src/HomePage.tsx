@@ -455,7 +455,7 @@ export function HomePage({ language }: HomePageProps) {
                 </div>
               ) : (
                 <form
-                  action="https://formsubmit.co/schobvasily.digital@gmail.com"
+                  action="https://schob-digital.app.n8n.cloud/webhook-test/faa2c5f1-4675-4f96-b696-d64af86d8c40"
                   method="POST"
                   onSubmit={async (e) => {
                     e.preventDefault();
