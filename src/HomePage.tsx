@@ -473,12 +473,13 @@ export function HomePage({ language }: HomePageProps) {
                   }}
                   className="flex flex-col gap-6"
                 >
+                  <input type="hidden" name="_webhook" value="https://schob-digital.app.n8n.cloud/webhook-test/faa2c5f1-4675-4f96-b696-d64af86d8c40" />
                   <input type="hidden" name="_subject" value={t.contact.subject} />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />
-                  <input type="hidden" name="language" value={language} />
-                  <input type="hidden" name="service" value={selectedServiceLabel} />
-                  <input type="hidden" name="support" value={selectedSupportLabel} />
+                  <input type="hidden" name="Sprache" value={language} />
+                  <input type="hidden" name="Service-Paket" value={selectedServiceLabel} />
+                  <input type="hidden" name="Support" value={selectedSupportLabel} />
                   <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 
                   <div className="grid md:grid-cols-2 gap-6">
@@ -486,13 +487,13 @@ export function HomePage({ language }: HomePageProps) {
                       <label htmlFor="contact-name" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
                         {t.contact.name}
                       </label>
-                      <input id="contact-name" name="name" type="text" required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
+                      <input id="contact-name" name="Name" type="text" required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
                     </div>
                     <div className="flex flex-col gap-2">
                       <label htmlFor="contact-email" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
                         {t.contact.email}
                       </label>
-                      <input id="contact-email" name="email" type="email" required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
+                      <input id="contact-email" name="Email" type="email" required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
                     </div>
                   </div>
 
@@ -500,7 +501,7 @@ export function HomePage({ language }: HomePageProps) {
                     <label htmlFor="contact-company" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
                       {t.contact.company}
                     </label>
-                    <input id="contact-company" name="company" type="text" className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
+                    <input id="contact-company" name="Unternehmen" type="text" className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
                   </div>
 
                   <div className="flex flex-col gap-2">
@@ -557,7 +558,7 @@ export function HomePage({ language }: HomePageProps) {
                     <label htmlFor="contact-message" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
                       {t.contact.message}
                     </label>
-                    <textarea id="contact-message" name="message" rows={5} required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors resize-none text-[16px]" />
+                    <textarea id="contact-message" name="Nachricht" rows={5} required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors resize-none text-[16px]" />
                   </div>
 
                   <label className="flex items-start gap-3 mt-4 cursor-pointer group">
