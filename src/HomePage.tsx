@@ -223,7 +223,13 @@ export function HomePage({ language }: HomePageProps) {
 
   const selectedPackage = t.packages.items.find((pkg) => pkg.id === selectedService);
   const selectedSupportOption = t.support.options.find((option) => option.id === selectedSupport);
-  const selectedServiceLabel = selectedService === 'custom' ? t.contact.customService : selectedPackage?.title ?? '';
+  const formatPackageLabel = (title: string, price: string) => `${title} ${price}€`;
+  const selectedServiceLabel =
+    selectedService === 'custom'
+      ? t.contact.customService
+      : selectedPackage
+        ? formatPackageLabel(selectedPackage.title, selectedPackage.price)
+        : '';
   const selectedSupportLabel =
     selectedSupport === 'none'
       ? t.support.none
@@ -515,7 +521,7 @@ export function HomePage({ language }: HomePageProps) {
                         </option>
                         {t.packages.items.map((pkg) => (
                           <option key={pkg.id} value={pkg.id}>
-                            {pkg.title}
+                            {formatPackageLabel(pkg.title, pkg.price)}
                           </option>
                         ))}
                         <option value="custom">{t.contact.customService}</option>
