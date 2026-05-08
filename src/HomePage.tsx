@@ -473,7 +473,7 @@ export function HomePage({ language }: HomePageProps) {
                   }}
                   className="flex flex-col gap-6"
                 >
-                  <input type="hidden" name="_webhook" value="https://schob-digital.app.n8n.cloud/webhook-test/faa2c5f1-4675-4f96-b696-d64af86d8c40" />
+                  <input type="hidden" name="_webhook" value="https://schob-digital.app.n8n.cloud/webhook/faa2c5f1-4675-4f96-b696-d64af86d8c40" />
                   <input type="hidden" name="_subject" value={t.contact.subject} />
                   <input type="hidden" name="_captcha" value="false" />
                   <input type="hidden" name="_template" value="table" />
