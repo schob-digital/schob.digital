@@ -162,6 +162,10 @@ I maintain a community or profile on the Skool platform. I use this platform to 
 https://www.skool.com/legal
 If users contact me via Skool or interact within the community, for example by writing posts or comments, I process the data provided to me in order to answer inquiries and provide the platform functions. This constitutes my legitimate interest, so the legal basis is Art. 6 para. 1 sentence 1 lit. f GDPR. It is possible that the operator or its servers are located in non-EU countries, such as the USA, so that data is processed there. This may result in risks for users. Options to object to processing by the platform operator or to adjust settings are available directly in the personal account settings on Skool.
 
+7.9. Telegram
+I maintain a profile on Telegram. The operator is Telegram FZ-LLC, Business Central Towers, Tower A, Office 1003/1004, Dubai, United Arab Emirates. The privacy policy is available here:
+https://telegram.org/privacy/eu
+
 8. Newsletter
 I reserve the right to inform customers who have already used my services or purchased goods from time to time by email or other means about my offers, provided they have not objected. The legal basis for this processing is Art. 6 para. 1 sentence 1 lit. f GDPR. My legitimate interest lies in direct marketing (recital 47 GDPR). Customers may object to the use of their email address for advertising purposes at any time without additional cost, for example via the link at the end of each email or by email to my email address stated above.
 On the basis of recipients' consent (Art. 6 para. 1 sentence 1 lit. a GDPR), I also measure the open and click rate of my newsletter in order to understand which content is relevant for recipients.

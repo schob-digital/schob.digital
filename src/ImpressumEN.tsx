@@ -26,11 +26,6 @@ export function ImpressumEN() {
           <p>80636 Munich</p>
           <p>Scope of insurance: Worldwide</p>
 
-          <h2>EU dispute resolution</h2>
-          <p>The European Commission provides a platform for online dispute resolution (ODR):</p>
-          <p><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr/</a></p>
-          <p>You can find my email address above in this legal notice.</p>
-
           <h2>Consumer dispute resolution / universal arbitration board</h2>
           <p>I am not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
 
