@@ -18,6 +18,8 @@ export function ImpressumEN() {
           <h2>Contact</h2>
           <p>Email: schobvasily.digital@gmail.com</p>
           <p>Phone: +49 156 78301732</p>
+          <h2>VAT ID</h2>
+          <p>VAT identification number pursuant to Section 27 a of the German VAT Act: DE462155871</p>
 
           <h2>Professional indemnity insurance</h2>
           <p>Name and address of the insurer:</p>

@@ -18,6 +18,8 @@ export function ImpressumDE() { return (<div className="legal-container w-full m
         <h2>Kontakt</h2>
         <p className="legal-meta">E-Mail: schobvasily.digital@gmail.com</p>
         <p className="legal-meta">Telefon: +49 156 78301732</p>
+        <h2>Umsatzsteuer-ID</h2>
+        <p className="legal-meta">Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE462155871</p>
         <h2>Angaben zur Berufshaftpflichtversicherung</h2>
         <h3>Name und Anschrift des Versicherers</h3>
         <p className="legal-meta">Hiscox SA, Niederlassung für Deutschland</p>
