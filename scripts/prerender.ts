@@ -10,8 +10,8 @@ import { siteBaseUrl } from '../site.config.ts';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const distDir = path.resolve(__dirname, '../dist');
-const templatePath = path.join(distDir, 'index.html');
+const outputDir = path.resolve(__dirname, '../docs');
+const templatePath = path.join(outputDir, 'index.html');
 
 const prerenderRoutes: Page[] = ['home', 'impressum', 'datenschutz'];
 
@@ -96,11 +96,11 @@ function renderPage(template: string, page: Page): string {
 
 async function writeRoutePage(page: Page, html: string) {
   if (page === 'home') {
-    await writeFile(path.join(distDir, 'index.html'), html, 'utf8');
+    await writeFile(path.join(outputDir, 'index.html'), html, 'utf8');
     return;
   }
 
-  const routeDir = path.join(distDir, page);
+  const routeDir = path.join(outputDir, page);
   await mkdir(routeDir, { recursive: true });
   await writeFile(path.join(routeDir, 'index.html'), html, 'utf8');
 }
@@ -115,7 +115,7 @@ ${urls
 </urlset>
 `;
 
-  await writeFile(path.join(distDir, 'sitemap.xml'), sitemapXml, 'utf8');
+  await writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXml, 'utf8');
 }
 
 async function writeRobots() {
@@ -125,7 +125,7 @@ Allow: /
 Sitemap: ${new URL('sitemap.xml', siteBaseUrl).toString()}
 `;
 
-  await writeFile(path.join(distDir, 'robots.txt'), robotsTxt, 'utf8');
+  await writeFile(path.join(outputDir, 'robots.txt'), robotsTxt, 'utf8');
 }
 
 async function main() {
@@ -141,7 +141,7 @@ async function main() {
     }
   }
 
-  await writeFile(path.join(distDir, '404.html'), homeHtml, 'utf8');
+  await writeFile(path.join(outputDir, '404.html'), homeHtml, 'utf8');
   await writeSitemap();
   await writeRobots();
 }
