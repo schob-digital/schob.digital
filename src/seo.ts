@@ -1,5 +1,6 @@
 import type { Language } from './siteContent';
 import { getCanonicalUrl, type Page } from './routing';
+import { siteBaseUrl, siteName } from '../site.config';
 
 type SeoEntry = {
   description: string;
@@ -58,6 +59,15 @@ type PageSeo = SeoEntry & {
   canonicalUrl: string;
 };
 
+function getWebSiteStructuredData() {
+  return JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: siteName,
+    url: siteBaseUrl,
+  });
+}
+
 function upsertMetaTag(selector: string, attributes: Record<string, string>) {
   let element = document.head.querySelector<HTMLMetaElement>(selector);
   if (!element) {
@@ -80,6 +90,18 @@ function upsertLinkTag(selector: string, attributes: Record<string, string>) {
   Object.entries(attributes).forEach(([name, value]) => {
     element.setAttribute(name, value);
   });
+}
+
+function upsertStructuredDataScript(selector: string, content: string) {
+  let element = document.head.querySelector<HTMLScriptElement>(selector);
+  if (!element) {
+    element = document.createElement('script');
+    element.type = 'application/ld+json';
+    element.setAttribute('data-schema', 'website');
+    document.head.appendChild(element);
+  }
+
+  element.textContent = content;
 }
 
 export function getPageSeo(page: Page, language: Language): PageSeo {
@@ -109,6 +131,10 @@ export function applyPageSeo(page: Page, language: Language) {
     property: 'og:type',
     content: 'website',
   });
+  upsertMetaTag('meta[property="og:site_name"]', {
+    property: 'og:site_name',
+    content: siteName,
+  });
   upsertMetaTag('meta[property="og:title"]', {
     property: 'og:title',
     content: seo.title,
@@ -137,4 +163,5 @@ export function applyPageSeo(page: Page, language: Language) {
     rel: 'canonical',
     href: seo.canonicalUrl,
   });
+  upsertStructuredDataScript('script[type="application/ld+json"][data-schema="website"]', getWebSiteStructuredData());
 }
