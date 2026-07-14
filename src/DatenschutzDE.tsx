@@ -1,4 +1,4 @@
-export function DatenschutzDE() { return (<div className="legal-container w-full max-w-4xl py-24 px-6 md:px-14 text-white">
+﻿export function DatenschutzDE() { return (<div className="legal-container w-full max-w-4xl py-24 px-6 md:px-14 text-white">
     <section className="legal-hero card-glass">
       <p className="eyebrow eyebrow--dark">Rechtliches</p>
       <h1>Datenschutz</h1>
@@ -71,7 +71,7 @@ export function DatenschutzDE() { return (<div className="legal-container w-full
         <p>Für die technische Übermittlung des Formulars verwende ich den Dienst FormSubmit. Anbieter ist FormSubmit, weitere Informationen finden Sie unter:</p>
         <p><a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">https://formsubmit.co/privacy.pdf</a></p>
         <p>Die Verarbeitung erfolgt je nach Anlass auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, soweit es um vorvertragliche Maßnahmen oder konkrete Leistungsanfragen geht, oder auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aufgrund meines berechtigten Interesses an einer effizienten Bearbeitung von Anfragen.</p>
-        <h3 id=”section-2-6”>2.6. Cookies und Webanalyse</h3>
+        <h3 id="section-2-6">2.6. Cookies und Webanalyse</h3>
         <p>Auf meiner Website setze ich Cookies und ähnliche Technologien ein. Dabei unterscheide ich zwischen technisch notwendigen Cookies und solchen, die Analysezwecken dienen.</p>
         <h4 id="section-2-6-1">2.6.1. Technisch notwendige (essenzielle) Cookies</h4>
         <p>Für den sicheren und fehlerfreien Betrieb meiner Website sind bestimmte Cookies zwingend erforderlich. Die Speicherung dieser Cookies auf Ihrem Endgerät und der Zugriff darauf erfolgen auf Grundlage von § 25 Abs. 2 TDDDG. Die anschließende Verarbeitung personenbezogener Daten erfolgt auf Grundlage meines berechtigten Interesses an der fehlerfreien, sicheren und nutzerfreundlichen Bereitstellung meiner Website gemäß Art. 6 Abs. 1 lit. f DSGVO.</p>

@@ -12,8 +12,8 @@ export function ImpressumDE() { return (<div className="legal-container w-full m
         <h2>Angaben gemäß § 5 DDG</h2>
         <h3>Anbieter dieser Website</h3>
         <p className="legal-meta">Vasily Schob</p>
-        <p className="legal-meta">Straße der Jugend 18</p>
-        <p className="legal-meta">14974 Ludwigsfelde</p>
+        <p className="legal-meta">Braunschweiger Str. 64</p>
+        <p className="legal-meta">12055 Berlin</p>
         <p className="legal-meta">Deutschland</p>
         <h2>Kontakt</h2>
         <p className="legal-meta">E-Mail: schobvasily.digital@gmail.com</p>

@@ -11,8 +11,8 @@ export function ImpressumEN() {
         <article className="legal-text">
           <h2>Provider of this website</h2>
           <p>Vasily Schob</p>
-          <p>Straße der Jugend 18</p>
-          <p>14974 Ludwigsfelde</p>
+          <p>Braunschweiger Str. 64</p>
+          <p>12055 Berlin</p>
           <p>Germany</p>
 
           <h2>Contact</h2>

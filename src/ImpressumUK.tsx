@@ -11,8 +11,8 @@ export function ImpressumUK() {
         <article className="legal-text">
           <h2>Постачальник цього вебсайту</h2>
           <p>Vasily Schob</p>
-          <p>Straße der Jugend 18</p>
-          <p>14974 Ludwigsfelde</p>
+          <p>Braunschweiger Str. 64</p>
+          <p>12055 Berlin</p>
           <p>Німеччина</p>
 
           <h2>Контакт</h2>
