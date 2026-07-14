@@ -53,14 +53,6 @@ For the technical transmission of the form, I use the FormSubmit service. The pr
 https://formsubmit.co/privacy.pdf
 Depending on the context, processing is based on Art. 6 para. 1 lit. b GDPR if the request concerns pre-contractual measures or specific service inquiries, or on Art. 6 para. 1 lit. f GDPR due to my legitimate interest in efficient request handling.
 
-2.5. Online appointment booking (Calendly)
-To schedule appointments, I offer the use of the "Calendly" tool. The provider is Calendly, LLC, 115 E Main St, Ste A1B, Buford, GA 30518, USA.
-When you book an appointment via my website, the data you enter (for example name, email address, appointment time, and optional information about your request) are stored on Calendly's servers. This is used to organize and manage appointment requests.
-The use of Calendly is based on my legitimate interest in user-friendly and efficient appointment management (Art. 6 para. 1 lit. f GDPR). If the appointment booking serves to prepare or perform a contract, the legal basis is Art. 6 para. 1 lit. b GDPR.
-As personal data may be transferred to the USA, I point out that the data transfer is based on the EU-U.S. Data Privacy Framework as well as the Standard Contractual Clauses of the European Commission in order to ensure an adequate level of data protection.
-Further information on how Calendly handles personal data can be found in Calendly's privacy policy:
-https://calendly.com/legal/privacy-notice
-
 2.6. Cookies and web analytics
 I use cookies and similar technologies on my website. I distinguish between technically necessary cookies and those used for analytics purposes.
 

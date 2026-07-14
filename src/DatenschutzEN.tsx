@@ -69,13 +69,6 @@ export function DatenschutzEN() { return (<div className="legal-container w-full
         <p>For the technical transmission of the form, I use the FormSubmit service. The provider is FormSubmit; further information can be found at:</p>
         <p><a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">https://formsubmit.co/privacy.pdf</a></p>
         <p>Depending on the context, processing is based on Art. 6 para. 1 lit. b GDPR if the request concerns pre-contractual measures or specific service inquiries, or on Art. 6 para. 1 lit. f GDPR due to my legitimate interest in efficient request handling.</p>
-        <h3 id="section-2-5">2.5. Online Appointment Booking (Calendly)</h3>
-        <p>To schedule appointments, I offer the use of the "Calendly" tool. The provider is Calendly, LLC, 115 E Main St, Ste A1B, Buford, GA 30518, USA.</p>
-        <p>When you book an appointment via my website, the data you enter (e.g., name, email address, time of the appointment, and optional information about your request) will be stored on Calendly's servers. This is for the organization and management of requests.</p>
-        <p>The use of Calendly is based on my legitimate interest in user-friendly and efficient appointment management (Art. 6 para. 1 lit. f GDPR). If the appointment booking serves to prepare or fulfill a contract, the legal basis is Art. 6 para. 1 lit. b GDPR.</p>
-        <p>Since personal data is transferred to the USA, I point out that the data transfer is based on the EU-U.S. Data Privacy Framework as well as the Standard Contractual Clauses of the EU Commission to ensure an adequate level of data protection.</p>
-        <p>Further information on how Calendly handles your data can be found in Calendly's privacy policy at:</p>
-        <p><a href="https://calendly.com/legal/privacy-notice" target="_blank" rel="noopener noreferrer">https://calendly.com/legal/privacy-notice</a></p>
         <h3 id="section-2-6">2.6. Cookies and web analytics</h3>
         <p>I use cookies and similar technologies on my website. I distinguish between technically necessary cookies and those used for analytics purposes.</p>
         <h4 id="section-2-6-1">2.6.1. Technically necessary (essential) cookies</h4>

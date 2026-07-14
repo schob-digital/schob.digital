@@ -69,13 +69,6 @@ export function DatenschutzUK() { return (<div className="legal-container w-full
         <p>Для технічної передачі форми я використовую сервіс FormSubmit. Провайдером є FormSubmit. Додаткову інформацію можна знайти за адресою:</p>
         <p><a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">https://formsubmit.co/privacy.pdf</a></p>
         <p>Залежно від обставин обробка базується на Art. 6 para. 1 lit. b GDPR, якщо йдеться про переддоговірні заходи або конкретні запити щодо послуг, або на Art. 6 para. 1 lit. f GDPR через мій законний інтерес в ефективному опрацюванні запитів.</p>
-        <h3 id="section-2-5">2.5. Онлайн-бронювання зустрічей (Calendly)</h3>
-        <p>Для узгодження зустрічей я пропоную використання інструмента "Calendly". Провайдером є Calendly, LLC, 115 E Main St, Ste A1B, Buford, GA 30518, USA.</p>
-        <p>Якщо ви бронюєте зустріч через мій вебсайт, дані, які ви вводите (наприклад ім’я, email-адреса, час зустрічі та необов’язкова інформація щодо вашого запиту), зберігаються на серверах Calendly. Це потрібно для організації та керування запитами на зустріч.</p>
-        <p>Використання Calendly базується на моєму законному інтересі у зручному та ефективному керуванні зустрічами (Art. 6 para. 1 lit. f GDPR). Якщо бронювання зустрічі слугує підготовці або виконанню договору, правовою підставою є Art. 6 para. 1 lit. b GDPR.</p>
-        <p>Оскільки персональні дані можуть передаватися до США, я зазначаю, що передача даних базується на EU-U.S. Data Privacy Framework, а також на Standard Contractual Clauses Європейської комісії, щоб забезпечити належний рівень захисту даних.</p>
-        <p>Детальнішу інформацію про обробку даних Calendly можна знайти в політиці конфіденційності Calendly:</p>
-        <p><a href="https://calendly.com/legal/privacy-notice" target="_blank" rel="noopener noreferrer">https://calendly.com/legal/privacy-notice</a></p>
         <h3 id="section-2-6">2.6. Cookies і вебаналітика</h3>
         <p>На моєму вебсайті я використовую cookies та подібні технології. При цьому я розрізняю технічно необхідні cookies і cookies для аналітичних цілей.</p>
         <h4 id="section-2-6-1">2.6.1. Технічно необхідні (essential) cookies</h4>
