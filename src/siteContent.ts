@@ -144,7 +144,7 @@ export const siteContent = {
         },
         {
           title: 'Aus echter Praxis',
-          desc: 'Ich arbeite seit über fünf Jahren mit KI, habe ein Studium in dem Feld abgeschlossen und berate heute als AI Consultant acht Unternehmen. Diese Erfahrung gebe ich eins zu eins weiter, aus Deutschland für den europäischen Markt.',
+          desc: 'Ich arbeite seit über fünf Jahren mit KI, habe ein Studium in dem Feld abgeschlossen und berate heute als AI Consultant acht Unternehmen. Meine Basis dafür kommt aus der Zeit bei Accenture und an der ETH Zürich. Diese Erfahrung gebe ich eins zu eins weiter, aus Deutschland für den europäischen Markt.',
         },
         {
           title: 'Auf dich zugeschnitten',
@@ -258,14 +258,14 @@ export const siteContent = {
       intro: "Hey, I'm Vasily.",
       headlineStart: 'I teach you how to make',
       highlighted: 'AI',
-      headlineEnd: 'work for your business – from your own website to data analysis.',
-      subline: 'From the basics to a finished result – clear, hands-on, based in Berlin.',
+      headlineEnd: 'work for your business, from your own website to data analysis.',
+      subline: 'Progress keeps moving, with or without you. I show you how to keep up: clear, hands-on, based in Berlin.',
       cta: 'Get in touch',
       imageAlt: 'Vasily Schob from Schob Digital',
     },
     portfolio: {
       eyebrow: 'Selected work',
-      intro: 'A few examples of how different the result can look – from a wedding site to an app. These are exactly the kind of sites you build yourself, with my support.',
+      intro: 'A few examples of how different the result can look, from a wedding site to an app. These are exactly the kind of sites you build yourself, with my support.',
       items: [
         {
           ...portfolioLinks.wedding,
@@ -297,11 +297,11 @@ export const siteContent = {
     learn: {
       eyebrow: 'Topics',
       title: 'What you learn with me',
-      intro: 'No computer science degree, no agency budget. I show you how to use AI tools so that you end up with a finished result – tailored to your industry and what you actually need.',
+      intro: 'No computer science degree, no agency budget needed. I show you how to use AI tools so you end up with a finished result, tailored to your industry and what you actually need.',
       items: [
         {
           title: 'Build a website with AI',
-          desc: 'You learn how to build your own landing page with AI tools in no time – from copy to design. In the end you know how to give the AI the right instructions to reach a finished result yourself.',
+          desc: 'You learn how to build your own landing page with AI tools in no time, from copy to design. By the end you know how to give AI the right instructions and reach a finished result yourself.',
         },
         {
           title: 'Automate your processes',
@@ -309,14 +309,14 @@ export const siteContent = {
         },
         {
           title: 'Understand data with AI',
-          desc: 'You do not need to be a data scientist to understand your numbers. I show you how to analyze your data yourself with AI tools and turn it into real decisions – not just colorful tables.',
+          desc: 'You do not need to be a data scientist to understand your numbers. I show you how to analyze your data yourself with AI tools and turn it into real decisions. Colorful tables alone will not get you there.',
         },
       ],
     },
     aiReality: {
       eyebrow: 'Honestly',
-      title: "What AI can do – and what it (still) can't",
-      intro: 'AI gives you a solid first draft in no time, whether it is text, code, or data analysis. What it does not replace: your understanding of what really matters for your business, and the ability to review the result critically before you use it. That is exactly the gap we close together – so AI works for you instead of you trusting it blindly.',
+      title: 'What AI can do and what it still cannot',
+      intro: 'AI gives you a solid first draft in no time, whether it is text, code, or data analysis. What it does not replace: your understanding of what really matters for your business, and the ability to review the result critically before you use it. That is exactly the gap we close together, so AI works for you instead of you trusting it blindly.',
       can: {
         title: 'What AI handles',
         items: [
@@ -338,11 +338,11 @@ export const siteContent = {
       eyebrow: 'Why me',
       titleLine1: 'No jargon,',
       titleLine2: 'real understanding.',
-      intro: 'I start from zero – for people who have had nothing to do with AI yet. And not just in theory, but so that it actually works on your computer in the end.',
+      intro: 'I start from zero, for people who have had nothing to do with AI yet. Not just in theory, but so it actually works on your computer in the end. Progress will not wait: fall behind now and the competition pulls ahead. Keep up, and you gain a real edge, in the job market and in your own business.',
       items: [
         {
           title: 'We start from zero',
-          desc: 'My guidance is made for people who have no idea yet. I explain the basics clearly, and we make sure together that everything really runs on your computer – not just grey theory.',
+          desc: 'My guidance is made for people who have no idea yet. I explain the basics clearly, and we make sure together that everything actually runs on your computer, not just in theory.',
         },
         {
           title: 'The right tools',
@@ -350,15 +350,15 @@ export const siteContent = {
         },
         {
           title: 'Data protection from the start',
-          desc: 'What are you allowed to do with AI, and what should you never do? Almost everyone in the field ignores this topic – with me it is front and center. So you avoid traps that get expensive later.',
+          desc: 'What are you allowed to do with AI, and what should you never do? Almost everyone in the field ignores this topic, with me it is front and center. So you avoid traps that get expensive later.',
         },
         {
           title: 'From real experience',
-          desc: 'I have worked with AI for over five years, completed a degree in the field, and today advise eight companies as an AI consultant. You get first-hand experience – from Germany, for all of Europe.',
+          desc: 'I have worked with AI for over five years, completed a degree in the field, and today advise eight companies as an AI consultant. That foundation goes back to my time at Accenture and ETH Zurich. You get first-hand experience, straight from Germany, for the whole European market.',
         },
         {
           title: 'Tailored to you',
-          desc: 'I do not explain the basics in general terms, but tailored to your industry and the tasks you actually want to get done. So you learn exactly what helps you.',
+          desc: 'I do not explain the basics in general terms. I tailor them to your industry and the tasks you actually want to get done, so you learn exactly what helps you.',
         },
       ],
     },
@@ -367,11 +367,11 @@ export const siteContent = {
       title: 'What participants say',
       items: [
         {
-          quote: 'I did not think it could be done in a day. I learned to build and design my landing page myself, and by the end of the day it was already online – people had even found it. Great feeling to have pulled that off myself.',
+          quote: 'I did not think it could be done in a day. I learned to build and design my landing page myself, and by the end of the day it was already online, people had even found it. Great feeling to have pulled that off myself.',
           author: 'Maxim, landing page project',
         },
         {
-          quote: 'I learned how to process the leads from my website automatically instead of doing it by hand every time. For the copy, I wrote down once how I want to sound – since then the AI just hits my tone, without it sounding like AI.',
+          quote: 'I learned how to process the leads from my website automatically instead of doing it by hand every time. For the copy, I wrote down once how I want to sound. Since then the AI just hits my tone, without it sounding like AI.',
           author: 'Alina, automation & copy',
         },
       ],
@@ -403,12 +403,12 @@ export const siteContent = {
           title: 'Guided build',
           subtitle: "Together until it's live",
           price: '200',
-          intro: 'We work on it together over a longer period – until your draft is ready and truly live.',
+          intro: 'We work on it together over a longer period, until your draft is ready and truly live.',
           highlight: true,
           features: [
             'Everything from "Code help & setup".',
             'We build together until the first draft stands.',
-            'In the end your site is deployed – online and reachable for everyone.',
+            'In the end your site is deployed: online and reachable for everyone.',
           ],
         },
         {
@@ -419,7 +419,7 @@ export const siteContent = {
           price: '50',
           oldPrice: '70',
           note: "50 € instead of 70 € for all participants of Karyna's marketing course.",
-          intro: 'Your privacy policy, written properly – the topic almost everyone overlooks.',
+          intro: 'Your privacy policy, written properly: the topic almost everyone overlooks.',
           highlight: false,
           features: [
             'An individually written privacy policy for your site.',
@@ -468,14 +468,14 @@ export const siteContent = {
       intro: 'Привіт, я Василь.',
       headlineStart: 'Я навчу тебе, як змусити',
       highlighted: 'ШІ',
-      headlineEnd: 'працювати на твій бізнес – від власного сайту до аналізу даних.',
-      subline: 'Від основ до готового результату – зрозуміло, на практиці, з Берліна.',
+      headlineEnd: 'працювати на твій бізнес, від власного сайту до аналізу даних.',
+      subline: 'Прогрес не чекає, з тобою чи без тебе. Я покажу, як не відстати: зрозуміло, на практиці, з Берліна.',
       cta: 'Написати мені',
       imageAlt: 'Василь Шоб зі Schob Digital',
     },
     portfolio: {
       eyebrow: 'Портфоліо',
-      intro: 'Кілька прикладів, наскільки різним може бути результат – від весільного сайту до застосунку. Саме такі сайти ти створюєш сам, за моєї підтримки.',
+      intro: 'Кілька прикладів, наскільки різним може бути результат, від весільного сайту до застосунку. Саме такі сайти ти створюєш сам, за моєї підтримки.',
       items: [
         {
           ...portfolioLinks.wedding,
@@ -507,11 +507,11 @@ export const siteContent = {
     learn: {
       eyebrow: 'Напрями',
       title: 'Чого ти навчишся зі мною',
-      intro: 'Без диплома програміста й без бюджету агенції. Я покажу, як користуватися інструментами ШІ так, щоб у результаті вийшов готовий продукт – під твою галузь і те, що тобі справді потрібно.',
+      intro: 'Без диплома програміста й без бюджету агенції. Я покажу, як користуватися інструментами ШІ так, щоб у результаті вийшов готовий продукт, під твою галузь і те, що тобі справді потрібно.',
       items: [
         {
           title: 'Створити сайт за допомогою ШІ',
-          desc: 'Ти навчишся швидко створювати власну landing page за допомогою інструментів ШІ – від тексту до дизайну. Наприкінці ти знатимеш, як давати ШІ правильні вказівки, щоб самому дійти до готового результату.',
+          desc: 'Ти навчишся швидко створювати власну landing page за допомогою інструментів ШІ, від тексту до дизайну. Наприкінці ти знатимеш, як давати ШІ правильні вказівки і самому доходити до готового результату.',
         },
         {
           title: 'Автоматизувати процеси',
@@ -519,14 +519,14 @@ export const siteContent = {
         },
         {
           title: 'Аналіз даних із ШІ',
-          desc: 'Не треба бути data scientist, щоб розуміти свої цифри. Я покажу, як самому аналізувати дані за допомогою ШІ й ухвалювати справжні рішення – а не просто робити барвисті таблиці.',
+          desc: 'Не треба бути data scientist, щоб розуміти свої цифри. Я покажу, як самому аналізувати дані за допомогою ШІ й ухвалювати справжні рішення. Барвисті таблиці самі по собі нічого не вирішують.',
         },
       ],
     },
     aiReality: {
       eyebrow: 'Чесно кажучи',
-      title: 'Що ШІ вміє – і чого (поки) ні',
-      intro: 'ШІ швидко дає тобі солідний перший чернетковий варіант – чи то текст, код, чи аналіз даних. Чого він не замінює: твого розуміння, що справді важливо для бізнесу, і вміння критично перевірити результат, перш ніж ним користуватися. Саме цю прогалину ми закриваємо разом – щоб ШІ працював на тебе, а не ти сліпо йому довіряв.',
+      title: 'Що ШІ вміє, а що ще ні',
+      intro: 'ШІ швидко дає тобі солідний перший чернетковий варіант, чи то текст, код, чи аналіз даних. Чого він не замінює: твого розуміння, що справді важливо для бізнесу, і вміння критично перевірити результат, перш ніж ним користуватися. Саме цю прогалину ми закриваємо разом, щоб ШІ працював на тебе, а не ти сліпо йому довіряв.',
       can: {
         title: 'Що бере на себе ШІ',
         items: [
@@ -548,11 +548,11 @@ export const siteContent = {
       eyebrow: 'Чому я',
       titleLine1: 'Без складних термінів,',
       titleLine2: 'а справжнє розуміння.',
-      intro: 'Я починаю з нуля – для людей, які ще зовсім не мали справи з ШІ. І не лише в теорії, а так, щоб наприкінці все справді працювало на твоєму комп’ютері.',
+      intro: 'Я починаю з нуля, для людей, які ще зовсім не мали справи з ШІ. І не лише в теорії, а так, щоб наприкінці все справді працювало на твоєму комп’ютері. Прогрес не чекає: хто відстане зараз, той бігтиме за конкурентами. Хто встигає за часом, той має перевагу і на ринку праці, і у власному бізнесі.',
       items: [
         {
           title: 'Починаємо з нуля',
-          desc: 'Мій супровід створений для людей, які поки не мають жодного уявлення. Я зрозуміло пояснюю основи, і ми разом дбаємо, щоб усе справді працювало на твоєму комп’ютері – не лише суха теорія.',
+          desc: 'Мій супровід створений для людей, які поки не мають жодного уявлення. Я зрозуміло пояснюю основи, і ми разом дбаємо, щоб усе справді працювало на твоєму комп’ютері, а не залишалося сухою теорією.',
         },
         {
           title: 'Правильні інструменти',
@@ -560,11 +560,11 @@ export const siteContent = {
         },
         {
           title: 'Захист даних із самого початку',
-          desc: 'Що можна робити з ШІ, а чого не можна ніколи? Цю тему ігнорують майже всі в галузі – у мене вона в центрі. Так ти не потрапиш у пастки, які потім дорого коштують.',
+          desc: 'Що можна робити з ШІ, а чого не можна ніколи? Цю тему ігнорують майже всі в галузі, у мене вона в центрі. Так ти не потрапиш у пастки, які потім дорого коштують.',
         },
         {
           title: 'З реального досвіду',
-          desc: 'Я працюю з ШІ понад п’ять років, здобув освіту в цій сфері й сьогодні консультую вісім компаній як AI-консультант. Ти отримуєш досвід із перших рук – з Німеччини, для всієї Європи.',
+          desc: 'Я працюю з ШІ понад п’ять років, здобув освіту в цій сфері й сьогодні консультую вісім компаній як AI-консультант. Ця база починається ще з часів роботи в Accenture та навчання в ETH Zurich. Ти отримуєш досвід із перших рук, з Німеччини, для всієї Європи.',
         },
         {
           title: 'Під тебе особисто',
@@ -577,11 +577,11 @@ export const siteContent = {
       title: 'Що кажуть учасники',
       items: [
         {
-          quote: 'Я не вірив, що це можливо за один день. Я навчився сам програмувати й дизайнити свою landing page, і наприкінці дня вона вже була онлайн – люди навіть уже її знайшли. Класне відчуття – зробити це самому.',
+          quote: 'Я не вірив, що це можливо за один день. Я навчився сам програмувати й дизайнити свою landing page, і наприкінці дня вона вже була онлайн, люди навіть уже її знайшли. Класне відчуття, зробити це самому.',
           author: 'Максим, проєкт landing page',
         },
         {
-          quote: 'Я навчився автоматично опрацьовувати ліди зі свого сайту, замість робити це щоразу вручну. Для текстів я один раз записав, як хочу звучати – відтоді ШІ просто влучає в мій тон, і це не звучить як ШІ.',
+          quote: 'Я навчився автоматично опрацьовувати ліди зі свого сайту, замість робити це щоразу вручну. Для текстів я один раз записав, як хочу звучати. Відтоді ШІ просто влучає в мій тон, і це не звучить як ШІ.',
           author: 'Аліна, автоматизація й тексти',
         },
       ],
@@ -613,12 +613,12 @@ export const siteContent = {
           title: 'Супроводжуваний запуск',
           subtitle: 'Разом до публікації',
           price: '200',
-          intro: 'Ми працюємо разом протягом довшого часу – доки твій чернетковий варіант не готовий і справді онлайн.',
+          intro: 'Ми працюємо разом протягом довшого часу, доки твій чернетковий варіант не готовий і справді онлайн.',
           highlight: true,
           features: [
             'Усе з «Допомоги з кодом і налаштування».',
             'Ми будуємо разом, доки не з’явиться перший робочий варіант.',
-            'Наприкінці твій сайт deployed – онлайн і доступний для всіх.',
+            'Наприкінці твій сайт deployed: онлайн і доступний для всіх.',
           ],
         },
         {
@@ -629,7 +629,7 @@ export const siteContent = {
           price: '50',
           oldPrice: '70',
           note: '50 € замість 70 € для всіх учасників маркетингового курсу Карини.',
-          intro: 'Твоя політика конфіденційності, написана як слід – тема, яку майже всі оминають.',
+          intro: 'Твоя політика конфіденційності, написана як слід: тема, яку майже всі оминають.',
           highlight: false,
           features: [
             'Індивідуально написана політика конфіденційності для твого сайту.',
