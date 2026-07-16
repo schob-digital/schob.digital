@@ -158,7 +158,7 @@ function LearnSection({ copy }: { copy: SiteCopy['learn'] }) {
           {copy.items.map((item, idx) => (
             <div key={item.title} className="bg-white border border-[#eee] p-8 md:p-10 flex flex-col">
               <div className="font-serif text-[28px] text-[#DCC99E] mb-4">0{idx + 1}</div>
-              <h3 className="font-serif text-[26px] font-bold mb-4 text-[#1a1a1a]">{item.title}</h3>
+              <h3 className="font-serif text-[26px] leading-[1.3] font-bold mb-4 min-h-[68px] text-[#1a1a1a]">{item.title}</h3>
               <p className="text-[17px] leading-[1.6] text-[#555]">{item.desc}</p>
             </div>
           ))}
@@ -188,7 +188,7 @@ function AiRealitySection({ copy }: { copy: SiteCopy['aiReality'] }) {
             <h3 className="font-serif text-[24px] font-bold mb-6 text-white">{copy.can.title}</h3>
             <ul className="space-y-4">
               {copy.can.items.map((item) => (
-                <li key={item} className="flex gap-3 text-[17px] text-white items-start">
+                <li key={item} className="flex gap-3 text-[17px] text-white items-start min-h-[52px]">
                   <CheckCircle2 className="w-[20px] h-[20px] text-[#DCC99E] flex-shrink-0 mt-[3px]" />
                   <span className="leading-[1.5]">{item}</span>
                 </li>
@@ -199,7 +199,7 @@ function AiRealitySection({ copy }: { copy: SiteCopy['aiReality'] }) {
             <h3 className="font-serif text-[24px] font-bold mb-6 text-white">{copy.cannot.title}</h3>
             <ul className="space-y-4">
               {copy.cannot.items.map((item) => (
-                <li key={item} className="flex gap-3 text-[17px] text-white items-start">
+                <li key={item} className="flex gap-3 text-[17px] text-white items-start min-h-[52px]">
                   <X className="w-[20px] h-[20px] text-white flex-shrink-0 mt-[3px]" />
                   <span className="leading-[1.5]">{item}</span>
                 </li>
