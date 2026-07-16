@@ -1,4 +1,4 @@
-import { type Language, languageOptions } from './siteContent';
+﻿import { type Language, languageOptions } from './siteContent';
 
 interface LanguageSwitcherProps {
   language: Language;
@@ -19,7 +19,7 @@ export function LanguageSwitcher({ language, setLanguage }: LanguageSwitcherProp
           className={`px-3 py-1 rounded-full text-[12px] font-bold uppercase tracking-[1px] transition-colors ${
             language === code
               ? 'bg-white text-[#1a1a1a] group-hover:bg-[#1a1a1a] group-hover:text-white'
-              : 'text-white/70 hover:text-white group-hover:text-[#1a1a1a]/60 group-hover:hover:text-[#1a1a1a]'
+              : 'text-white hover:text-white group-hover:text-[#1a1a1a]/60 group-hover:hover:text-[#1a1a1a]'
           }`}
         >
           {label}

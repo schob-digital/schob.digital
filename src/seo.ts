@@ -10,9 +10,9 @@ type SeoEntry = {
 const seoContent: Record<Language, Record<Page, SeoEntry>> = {
   de: {
     home: {
-      title: 'Schob Digital | Websites in einem Tag',
+      title: 'Schob Digital | KI selbst nutzen lernen',
       description:
-        'Schob Digital erstellt moderne Websites fuer Unternehmen mit Fokus auf Webdesign, Entwicklung, Conversion und einen schnellen Go-live.',
+        'Vasily Schob bringt dir bei, wie du KI fuer dein Business nutzt: eigene Website bauen, Prozesse automatisieren, Daten analysieren. Verstaendlich, praxisnah und mit Fokus auf Datenschutz.',
     },
     impressum: {
       title: 'Impressum | Schob Digital',
@@ -25,9 +25,9 @@ const seoContent: Record<Language, Record<Page, SeoEntry>> = {
   },
   en: {
     home: {
-      title: 'Schob Digital | Websites in one day',
+      title: 'Schob Digital | Learn to use AI yourself',
       description:
-        'Schob Digital builds modern business websites with a focus on web design, development, conversion and a fast go-live.',
+        'Vasily Schob teaches you how to use AI for your business: build your own website, automate processes, analyze data. Clear, hands-on and with a focus on data protection.',
     },
     impressum: {
       title: 'Legal Notice | Schob Digital',
@@ -40,9 +40,9 @@ const seoContent: Record<Language, Record<Page, SeoEntry>> = {
   },
   uk: {
     home: {
-      title: 'Schob Digital | Сайти за один день',
+      title: 'Schob Digital | Навчися сам користуватися ШІ',
       description:
-        'Schob Digital створює сучасні бізнес-сайти з фокусом на дизайн, розробку, конверсію та швидкий запуск.',
+        'Василь Шоб навчає, як користуватися ШІ для бізнесу: створити власний сайт, автоматизувати процеси, аналізувати дані. Зрозуміло, на практиці та з фокусом на захист даних.',
     },
     impressum: {
       title: 'Правова інформація | Schob Digital',

@@ -19,8 +19,8 @@ export function DatenschutzEN() { return (<div className="legal-container w-full
         <h2 id="section-1">1. Controller</h2>
         <p>The controller responsible for data processing on this website is:</p>
         <p>Vasily Schob</p>
-        <p>Straße der Jugend 18</p>
-        <p>14974 Ludwigsfelde</p>
+        <p>Braunschweiger Str. 64</p>
+        <p>12055 Berlin</p>
         <p>Germany</p>
         <p>Email: schobvasily.digital@gmail.com</p>
         <p>Phone: +49 156 78301732</p>

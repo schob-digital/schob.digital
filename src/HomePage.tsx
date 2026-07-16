@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useRef, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react';
 import { ArrowRight, CheckCircle2, Menu, X } from 'lucide-react';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -12,10 +12,9 @@ export type HomePageProps = {
 
 type SiteCopy = (typeof siteContent)[Language];
 type PackageId = SiteCopy['packages']['items'][number]['id'];
-type SupportId = SiteCopy['support']['options'][number]['id'];
 
 const navLinkClass =
-  'text-[10px] xl:text-[12px] uppercase tracking-[1px] font-semibold text-white/80 group-hover:text-[#1a1a1a]/80 hover:!opacity-70 transition-colors whitespace-nowrap';
+  'text-[10px] xl:text-[12px] uppercase tracking-[1px] font-semibold text-white group-hover:text-[#1a1a1a]/80 hover:!opacity-70 transition-colors whitespace-nowrap';
 
 type NavigationProps = HomePageProps;
 
@@ -37,8 +36,8 @@ export function Navigation({ language, setLanguage }: NavigationProps) {
 
   const sectionLinks = [
     { href: getSectionHref('portfolio'), label: t.nav.portfolio },
+    { href: getSectionHref('learn'), label: t.nav.learn },
     { href: getSectionHref('difference'), label: t.nav.difference },
-    { href: getSectionHref('calendly'), label: t.nav.calendly },
     { href: getSectionHref('packages'), label: t.nav.packages },
     { href: getSectionHref('contact'), label: t.nav.contact },
   ];
@@ -122,14 +121,14 @@ export function Navigation({ language, setLanguage }: NavigationProps) {
               <a
                 href={impressumHref}
                 onClick={closeMenu}
-                className="py-4 text-[14px] uppercase tracking-[2px] font-bold text-white/70 hover:text-white transition-colors border-b border-white/10"
+                className="py-4 text-[14px] uppercase tracking-[2px] font-bold text-white hover:text-white transition-colors border-b border-white/10"
               >
                 {t.nav.imprint}
               </a>
               <a
                 href={datenschutzHref}
                 onClick={closeMenu}
-                className="py-4 text-[14px] uppercase tracking-[2px] font-bold text-white/70 hover:text-white transition-colors"
+                className="py-4 text-[14px] uppercase tracking-[2px] font-bold text-white hover:text-white transition-colors"
               >
                 {t.nav.privacy}
               </a>
@@ -138,6 +137,78 @@ export function Navigation({ language, setLanguage }: NavigationProps) {
         )}
       </AnimatePresence>
     </nav>
+  );
+}
+
+function LearnSection({ copy }: { copy: SiteCopy['learn'] }) {
+  return (
+    <section className="bg-[#f9f9f9] py-24 md:py-32 border-t border-[#eee]" id="learn">
+      <div className="w-full px-6 md:px-14">
+        <div className="max-w-4xl mb-16">
+          <div className="text-[16px] md:text-[20px] uppercase tracking-[3px] font-bold mb-6 text-[#DCC99E]">
+            {copy.eyebrow}
+          </div>
+          <h2 className="font-serif text-[40px] md:text-[60px] font-bold leading-[1.1] mb-8 text-[#1a1a1a]">
+            {copy.title}
+          </h2>
+          <p className="text-[#1a1a1a] leading-[1.7] text-[18px] md:text-[24px]">{copy.intro}</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          {copy.items.map((item, idx) => (
+            <div key={item.title} className="bg-white border border-[#eee] p-8 md:p-10 flex flex-col">
+              <div className="font-serif text-[28px] text-[#DCC99E] mb-4">0{idx + 1}</div>
+              <h3 className="font-serif text-[26px] font-bold mb-4 text-[#1a1a1a]">{item.title}</h3>
+              <p className="text-[17px] leading-[1.6] text-[#555]">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function AiRealitySection({ copy }: { copy: SiteCopy['aiReality'] }) {
+  return (
+    <section className="bg-[#0B1221] py-24 md:py-32 border-t border-white/5 relative overflow-hidden">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[900px] h-[70%] rounded-full bg-[#00D4FF] opacity-10 blur-[120px] pointer-events-none z-0" />
+      <div className="w-full px-6 md:px-14 relative z-10">
+        <div className="max-w-4xl mb-16">
+          <div className="text-[16px] md:text-[20px] uppercase tracking-[3px] font-bold mb-6 text-[#DCC99E]">
+            {copy.eyebrow}
+          </div>
+          <h2 className="font-serif text-[40px] md:text-[60px] font-bold leading-[1.1] mb-8 text-white">
+            {copy.title}
+          </h2>
+          <p className="text-white leading-[1.7] text-[18px] md:text-[24px]">{copy.intro}</p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 md:gap-10 max-w-5xl">
+          <div className="bg-white/5 border border-white/10 p-8 md:p-10">
+            <h3 className="font-serif text-[24px] font-bold mb-6 text-white">{copy.can.title}</h3>
+            <ul className="space-y-4">
+              {copy.can.items.map((item) => (
+                <li key={item} className="flex gap-3 text-[17px] text-white items-start">
+                  <CheckCircle2 className="w-[20px] h-[20px] text-[#DCC99E] flex-shrink-0 mt-[3px]" />
+                  <span className="leading-[1.5]">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-white/5 border border-white/10 p-8 md:p-10">
+            <h3 className="font-serif text-[24px] font-bold mb-6 text-white">{copy.cannot.title}</h3>
+            <ul className="space-y-4">
+              {copy.cannot.items.map((item) => (
+                <li key={item} className="flex gap-3 text-[17px] text-white items-start">
+                  <X className="w-[20px] h-[20px] text-white flex-shrink-0 mt-[3px]" />
+                  <span className="leading-[1.5]">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -199,42 +270,49 @@ function DifferenceSection({ copy }: { copy: SiteCopy['difference'] }) {
   );
 }
 
+function TestimonialsSection({ copy }: { copy: SiteCopy['testimonials'] }) {
+  return (
+    <section className="bg-[#f9f9f9] py-24 md:py-32 border-t border-[#eee]" id="testimonials">
+      <div className="w-full px-6 md:px-14">
+        <div className="mb-12 text-[16px] md:text-[20px] uppercase tracking-[3px] font-bold text-[#DCC99E]">
+          {copy.eyebrow}
+        </div>
+        <h2 className="font-serif text-[40px] md:text-[60px] font-bold leading-[1.1] mb-16 text-[#1a1a1a] max-w-4xl">
+          {copy.title}
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6 md:gap-10 max-w-6xl">
+          {copy.items.map((item) => (
+            <figure key={item.author} className="bg-white border border-[#eee] p-8 md:p-12 flex flex-col">
+              <div className="font-serif text-[60px] leading-none text-[#DCC99E] mb-4">“</div>
+              <blockquote className="text-[19px] md:text-[22px] leading-[1.6] text-[#1a1a1a] mb-8 flex-1">
+                {item.quote}
+              </blockquote>
+              <figcaption className="text-[16px] uppercase tracking-[1px] font-bold text-[#666]">
+                {item.author}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function HomePage({ language }: HomePageProps) {
   const t = siteContent[language];
   const [selectedService, setSelectedService] = useState<PackageId | 'custom' | ''>('');
-  const [selectedSupport, setSelectedSupport] = useState<SupportId | 'none'>('none');
   const [formStatus, setFormStatus] = useState<'idle' | 'success'>('idle');
-  const calendlyHref = getSectionHref('calendly');
   const contactHref = getSectionHref('contact');
   const datenschutzHref = getPageHref('datenschutz');
 
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
-
   const selectedPackage = t.packages.items.find((pkg) => pkg.id === selectedService);
-  const selectedSupportOption = t.support.options.find((option) => option.id === selectedSupport);
   const formatPackageLabel = (title: string, price: string) => `${title} ${price}€`;
   const selectedServiceLabel =
     selectedService === 'custom'
       ? t.contact.customService
       : selectedPackage
         ? formatPackageLabel(selectedPackage.title, selectedPackage.price)
-        : '';
-  const selectedSupportLabel =
-    selectedSupport === 'none'
-      ? t.support.none
-      : selectedSupportOption
-        ? `${selectedSupportOption.title} (${selectedSupportOption.price} € ${t.support.period})`
         : '';
 
   return (
@@ -255,13 +333,12 @@ export function HomePage({ language }: HomePageProps) {
                 {t.hero.intro}
               </p>
               <h1 className="text-white text-[30px] sm:text-[40px] md:text-[53px] lg:text-[68px] font-bold leading-[1.1] tracking-tight m-0 mb-8 md:mb-12 drop-shadow-lg relative z-20">
-                {t.hero.headlineStart} <span className="text-[#DCC99E]">{t.hero.highlighted}</span>,<br className="hidden md:block" />{' '}
-                {t.hero.headlineEnd}
+                {t.hero.headlineStart} <span className="text-[#DCC99E]">{t.hero.highlighted}</span> {t.hero.headlineEnd}
               </h1>
               <p className="text-[#DCC99E] text-[17px] md:text-[19px] mb-10 md:mb-16 font-light">{t.hero.subline}</p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href={calendlyHref}
+                  href={contactHref}
                   className="px-8 py-4 bg-white text-[#111] uppercase text-[15px] font-bold tracking-[1px] rounded-none hover:bg-[#f0f0f0] transition-colors flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   {t.hero.cta} <ArrowRight className="w-5 h-5" />
@@ -286,9 +363,10 @@ export function HomePage({ language }: HomePageProps) {
           <div className="absolute left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:-right-[5%] bottom-[5%] md:bottom-[8%] w-[85%] md:w-[50%] h-[72%] md:h-[75%] rounded-full bg-[#00D4FF] opacity-10 blur-[100px] md:blur-[140px] pointer-events-none z-[5]" />
         </div>
         <div className="relative z-10 w-full px-6 md:px-14 mb-12">
-          <div className="flex justify-between items-center text-[16px] md:text-[20px] uppercase tracking-[3px] font-bold text-[#DCC99E]">
+          <div className="flex justify-between items-center text-[16px] md:text-[20px] uppercase tracking-[3px] font-bold text-[#DCC99E] mb-6">
             <span>{t.portfolio.eyebrow}</span>
           </div>
+          <p className="text-white leading-[1.7] text-[18px] md:text-[22px] max-w-3xl">{t.portfolio.intro}</p>
         </div>
 
         <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -313,7 +391,7 @@ export function HomePage({ language }: HomePageProps) {
                 <h3 className="font-bold text-[24px] md:text-[28px] text-white mb-2 transform transition-transform duration-500 group-hover:-translate-y-2">
                   {item.title}
                 </h3>
-                <p className="text-[15px] md:text-[18px] text-white/80 transform transition-transform duration-500 group-hover:-translate-y-2 delay-75">
+                <p className="text-[15px] md:text-[18px] text-white transform transition-transform duration-500 group-hover:-translate-y-2 delay-75">
                   {item.desc}
                 </p>
               </div>
@@ -322,25 +400,13 @@ export function HomePage({ language }: HomePageProps) {
         </div>
       </section>
 
+      <LearnSection copy={t.learn} />
+
+      <AiRealitySection copy={t.aiReality} />
+
       <DifferenceSection copy={t.difference} />
 
-      <section className="bg-[#f9f9f9] py-24 border-t border-[#eee]" id="calendly">
-        <div className="max-w-7xl mx-auto w-full px-6 md:px-14">
-          <div className="mb-12 flex justify-between items-center text-[16px] md:text-[20px] uppercase tracking-[3px] font-bold text-[#DCC99E]">
-            <span>{t.calendly.eyebrow}</span>
-          </div>
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-[40px] md:text-[60px] font-bold leading-[1.1] mb-8 text-[#1a1a1a]">
-              {t.calendly.title}
-            </h2>
-            <p className="text-[#1a1a1a] leading-[1.7] text-[18px] md:text-[24px] max-w-4xl mx-auto">
-              {t.calendly.desc}
-            </p>
-          </div>
-
-          <div className="calendly-inline-widget" data-url="https://calendly.com/schobvasily-digital/30min" style={{ minWidth: '320px', height: '700px' }} />
-        </div>
-      </section>
+      <TestimonialsSection copy={t.testimonials} />
 
       <section className="bg-white border-t border-[#eee] py-24" id="packages">
         <div className="w-full px-6 md:px-14">
@@ -348,7 +414,7 @@ export function HomePage({ language }: HomePageProps) {
             <span>{t.packages.eyebrow}</span>
           </div>
 
-          <div className="grid md:grid-cols-3 bg-white border-y border-[#eee] mb-16">
+          <div className="grid md:grid-cols-3 bg-white border-y border-[#eee]">
             {t.packages.items.map((pkg) => (
               <div
                 key={pkg.id}
@@ -367,6 +433,9 @@ export function HomePage({ language }: HomePageProps) {
                   <h3 className="font-serif text-[28px] font-bold mb-1">{pkg.title}</h3>
                   <div className="text-[18px] font-semibold text-[#1a1a1a] mb-6 min-h-[40px] leading-[1.4]">{pkg.subtitle}</div>
                   <div className="mb-6 flex items-baseline gap-2 border-b border-[#eee] pb-4">
+                    {'oldPrice' in pkg && pkg.oldPrice && (
+                      <span className="text-[22px] font-bold text-[#b0b0b0] line-through">{pkg.oldPrice} €</span>
+                    )}
                     <span className="text-[35px] font-bold">{pkg.price} €</span>
                     <span className="text-[15px] uppercase tracking-[1px] opacity-60">{t.packages.plusVat}</span>
                   </div>
@@ -379,6 +448,11 @@ export function HomePage({ language }: HomePageProps) {
                       </li>
                     ))}
                   </ul>
+                  {'note' in pkg && pkg.note && (
+                    <p className="text-[15px] leading-[1.5] text-[#1a1a1a] bg-[#f4ecd8] border border-[#DCC99E] px-4 py-3 mb-8">
+                      {pkg.note}
+                    </p>
+                  )}
                 </div>
                 <a
                   href={contactHref}
@@ -388,36 +462,6 @@ export function HomePage({ language }: HomePageProps) {
                       ? 'bg-[#1a1a1a] text-white border-[#1a1a1a] hover:bg-[#333]'
                       : 'bg-transparent text-[#1a1a1a] border-[#1a1a1a] hover:bg-[#f0f0f0]'
                   }`}
-                >
-                  {t.packages.request}
-                </a>
-              </div>
-            ))}
-          </div>
-
-          <div className="mb-10 flex flex-col items-center text-center">
-            <h3 className="font-serif text-[32px] font-bold mb-3">{t.support.title}</h3>
-            <p className="text-[19px] uppercase tracking-[1px] opacity-60 mb-1 font-bold">{t.support.cancel}</p>
-            <p className="text-[21px] text-[#666]">{t.support.intro}</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-10 max-w-4xl mx-auto">
-            {t.support.options.map((option, index) => (
-              <div
-                key={option.id}
-                className={`${index === 1 ? 'bg-[#f9f9f9]' : 'bg-white'} border border-[#eee] p-8 md:p-10 flex flex-col items-center text-center relative`}
-              >
-                <h4 className="font-serif text-[28px] font-bold mb-3">{option.title}</h4>
-                <div className="mb-4 flex items-baseline gap-2">
-                  <span className="text-[35px] font-bold">{option.price} €</span>
-                  <span className="text-[15px] uppercase tracking-[1px] opacity-60">{t.support.period}</span>
-                </div>
-                <p className="text-[19px] text-[#222] font-semibold mb-4">{option.lead}</p>
-                <p className="text-[18px] text-[#666] leading-[1.6] mb-8">{option.desc}</p>
-                <a
-                  href={contactHref}
-                  onClick={() => setSelectedSupport(option.id)}
-                  className="w-full py-3 mt-auto text-center font-bold text-[16px] uppercase tracking-[1px] transition-colors border bg-transparent text-[#1a1a1a] border-[#1a1a1a] hover:bg-[#f0f0f0]"
                 >
                   {t.packages.request}
                 </a>
@@ -444,7 +488,7 @@ export function HomePage({ language }: HomePageProps) {
                 <div className="text-center py-10">
                   <CheckCircle2 className="w-16 h-16 mx-auto mb-4 text-[#DCC99E]" />
                   <h3 className="font-serif text-[24px] font-bold mb-2 text-white">{t.contact.successTitle}</h3>
-                  <p className="text-white/60">{t.contact.successText}</p>
+                  <p className="text-white">{t.contact.successText}</p>
                   <button
                     type="button"
                     onClick={() => setFormStatus('idle')}
@@ -479,18 +523,17 @@ export function HomePage({ language }: HomePageProps) {
                   <input type="hidden" name="_template" value="table" />
                   <input type="hidden" name="Sprache" value={language} />
                   <input type="hidden" name="Service-Paket" value={selectedServiceLabel} />
-                  <input type="hidden" name="Support" value={selectedSupportLabel} />
                   <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="contact-name" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
+                      <label htmlFor="contact-name" className="text-[16px] uppercase tracking-[1px] font-bold text-white">
                         {t.contact.name}
                       </label>
                       <input id="contact-name" name="Name" type="text" required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
                     </div>
                     <div className="flex flex-col gap-2">
-                      <label htmlFor="contact-email" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
+                      <label htmlFor="contact-email" className="text-[16px] uppercase tracking-[1px] font-bold text-white">
                         {t.contact.email}
                       </label>
                       <input id="contact-email" name="Email" type="email" required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
@@ -498,14 +541,14 @@ export function HomePage({ language }: HomePageProps) {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-company" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
+                    <label htmlFor="contact-company" className="text-[16px] uppercase tracking-[1px] font-bold text-white">
                       {t.contact.company}
                     </label>
                     <input id="contact-company" name="Unternehmen" type="text" className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]" />
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-service" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
+                    <label htmlFor="contact-service" className="text-[16px] uppercase tracking-[1px] font-bold text-white">
                       {t.contact.service}
                     </label>
                     <div className="relative">
@@ -532,30 +575,7 @@ export function HomePage({ language }: HomePageProps) {
                   </div>
 
                   <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-support" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
-                      {t.contact.support}
-                    </label>
-                    <div className="relative">
-                      <select
-                        id="contact-support"
-                        name="support_selection"
-                        value={selectedSupport}
-                        onChange={(e) => setSelectedSupport(e.target.value as SupportId | 'none')}
-                        className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] appearance-none focus:outline-none focus:border-[#1a1a1a] transition-colors text-[16px]"
-                      >
-                        <option value="none">{t.support.none}</option>
-                        {t.support.options.map((option) => (
-                          <option key={option.id} value={option.id}>
-                            {option.title} ({option.price} € {t.support.period})
-                          </option>
-                        ))}
-                      </select>
-                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#1a1a1a]/40">▼</div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-2">
-                    <label htmlFor="contact-message" className="text-[16px] uppercase tracking-[1px] font-bold text-white/80">
+                    <label htmlFor="contact-message" className="text-[16px] uppercase tracking-[1px] font-bold text-white">
                       {t.contact.message}
                     </label>
                     <textarea id="contact-message" name="Nachricht" rows={5} required className="w-full p-4 border border-[#eee] bg-[#f9f9f9] text-[#1a1a1a] focus:outline-none focus:border-[#1a1a1a] transition-colors resize-none text-[16px]" />
@@ -563,7 +583,7 @@ export function HomePage({ language }: HomePageProps) {
 
                   <label className="flex items-start gap-3 mt-4 cursor-pointer group">
                     <input id="contact-consent" name="privacy" type="checkbox" required className="mt-1 w-5 h-5 accent-[#1a1a1a]" />
-                    <span className="text-[16px] text-white/80 leading-[1.6]">
+                    <span className="text-[16px] text-white leading-[1.6]">
                       {t.contact.consentStart}{' '}
                       <a href={datenschutzHref} className="underline hover:text-white transition-colors">
                         {t.contact.consentLink}
@@ -590,10 +610,10 @@ export function Footer({ language }: { language: Language }) {
 
   return (
     <footer className="py-8 bg-[#0B1221] border-t border-white/5 text-center flex flex-col items-center gap-4">
-      <p className="text-white/40 text-[15px] uppercase tracking-[1px]">
+      <p className="text-white text-[15px] uppercase tracking-[1px]">
         © {new Date().getFullYear()} Schob Digital. {t.footer.rights}
       </p>
-      <button data-open-cookie-settings className="text-white/40 hover:text-white transition-colors text-[13px] underline">
+      <button data-open-cookie-settings className="text-white hover:text-white transition-colors text-[13px] underline">
         {t.footer.cookieSettings}
       </button>
     </footer>

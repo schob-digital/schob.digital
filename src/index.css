@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Georgia:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Georgia:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -24,7 +24,7 @@
   }
 
   .legal-hero p {
-    @apply text-[18px] md:text-[22px] text-white/80 max-w-2xl leading-relaxed;
+    @apply text-[18px] md:text-[22px] text-white max-w-2xl leading-relaxed;
   }
 
   .legal-jump-nav {
@@ -32,7 +32,7 @@
   }
 
   .legal-jump-nav a {
-    @apply text-sm text-white/70 hover:text-white transition-colors bg-white/10 px-4 py-2 rounded-full;
+    @apply text-sm text-white hover:text-white transition-colors bg-white/10 px-4 py-2 rounded-full;
   }
 
   .legal-content h2 {
@@ -40,19 +40,19 @@
   }
 
   .legal-content h3 {
-    @apply text-[20px] md:text-[24px] font-bold mt-12 mb-6 text-white/95;
+    @apply text-[20px] md:text-[24px] font-bold mt-12 mb-6 text-white;
   }
   
   .legal-content h4 {
-    @apply text-[14px] font-bold mt-10 mb-4 text-white/60 tracking-wider uppercase;
+    @apply text-[14px] font-bold mt-10 mb-4 text-white tracking-wider uppercase;
   }
 
   .legal-content p {
-    @apply text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white/80;
+    @apply text-[16px] md:text-[18px] mb-6 leading-[1.8] text-white;
   }
 
   .legal-meta {
-    @apply text-[16px] md:text-[18px] mb-2 text-white/80;
+    @apply text-[16px] md:text-[18px] mb-2 text-white;
   }
 
   .legal-content a {
@@ -60,7 +60,7 @@
   }
 
   .legal-content ul, .legal-content ol {
-    @apply mb-8 pl-6 text-[16px] md:text-[18px] text-white/80 leading-[1.8] list-disc marker:text-[#DCC99E];
+    @apply mb-8 pl-6 text-[16px] md:text-[18px] text-white leading-[1.8] list-disc marker:text-[#DCC99E];
   }
 
   .legal-content li {

@@ -19,8 +19,8 @@ export function DatenschutzUK() { return (<div className="legal-container w-full
         <h2 id="section-1">1. Відповідальний</h2>
         <p>Відповідальним за обробку даних на цьому вебсайті є:</p>
         <p>Vasily Schob</p>
-        <p>Straße der Jugend 18</p>
-        <p>14974 Ludwigsfelde</p>
+        <p>Braunschweiger Str. 64</p>
+        <p>12055 Berlin</p>
         <p>Німеччина</p>
         <p>Електронна пошта: schobvasily.digital@gmail.com</p>
         <p>Телефон: +49 156 78301732</p>
